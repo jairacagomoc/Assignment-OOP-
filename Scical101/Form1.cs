@@ -68,7 +68,6 @@ namespace Scical101
         {
             if ((textBox1_Result.Text == "0") || (isOperation))
                 textBox1_Result.Clear();
-
             isOperation = false;
             Button button = (Button)sender;
                 textBox1_Result.Text = textBox1_Result.Text + " 3.14159 ";
@@ -83,9 +82,13 @@ namespace Scical101
                 labelOperation.Text = System.Convert.ToString(resultValue) + "  " + operation;
                 isOperation = true;
             }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+
         }
 
-        private void Equal_Button(object sender, EventArgs e)
+        private void EqualButton_Click(object sender, EventArgs e)
         {
             switch (operation)
             {
@@ -106,9 +109,109 @@ namespace Scical101
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void buttonLog_Click(object sender, EventArgs e)
+        {
+            double ilog = Double.Parse(textBox1_Result.Text);
+            labelOperation.Text = System.Convert.ToString("Log" + "(" + (textBox1_Result.Text) + ")");
+            ilog = Math.Log10(ilog);
+            textBox1_Result.Text = System.Convert.ToString(ilog);
+            
+        }
+
+        private void Sqrt_Click(object sender, EventArgs e)
+        {
+            double sq = Double.Parse(textBox1_Result.Text);
+            labelOperation.Text = System.Convert.ToString("Sqrt" + "(" + (textBox1_Result.Text) + ")");
+            sq = Math.Sqrt(sq);
+            textBox1_Result.Text = System.Convert.ToString(sq);
+        }
+
+        private void Sin_Click(object sender, EventArgs e)
+        {
+            double  sin= Double.Parse(textBox1_Result.Text);
+            labelOperation.Text = System.Convert.ToString("Sin" + "(" + (textBox1_Result.Text) + ")");
+            sin = Math.Sin(sin);
+            textBox1_Result.Text = System.Convert.ToString(sin);
+        }
+
+        private void Cos_Click(object sender, EventArgs e)
+        {
+            double cos = Double.Parse(textBox1_Result.Text);
+            labelOperation.Text = System.Convert.ToString("Cos" + "(" + (textBox1_Result.Text) + ")");
+            cos = Math.Cos(cos);
+            textBox1_Result.Text = System.Convert.ToString(cos);
+        }
+
+        private void Tan_Click(object sender, EventArgs e)
+        {
+            double tan = Double.Parse(textBox1_Result.Text);
+            labelOperation.Text = System.Convert.ToString("Tan" + "(" + (textBox1_Result.Text) + ")");
+            tan = Math.Tan(tan);
+            textBox1_Result.Text = System.Convert.ToString(tan);
+        }
+
+        private void ln_Click(object sender, EventArgs e)
+        {
+            double ilog = Double.Parse(textBox1_Result.Text);
+            labelOperation.Text = System.Convert.ToString("Log" + "(" + (textBox1_Result.Text) + ")");
+            ilog = Math.Log(ilog);
+            textBox1_Result.Text = System.Convert.ToString(ilog);
+        }
+
+        private void Sinh_Click(object sender, EventArgs e)
+        {
+            double qsinh = Double.Parse(textBox1_Result.Text);
+            labelOperation.Text = System.Convert.ToString("Sinh" + "(" + (textBox1_Result.Text) + ")");
+            qsinh = Math.Sinh(qsinh);
+            textBox1_Result.Text = System.Convert.ToString(qsinh);
+        }
+
+        private void Cosh_Click(object sender, EventArgs e)
+        {
+            double qcosh = Double.Parse(textBox1_Result.Text);
+            labelOperation.Text = System.Convert.ToString("Cosh" + "(" + (textBox1_Result.Text) + ")");
+            qcosh = Math.Cosh(qcosh);
+            textBox1_Result.Text = System.Convert.ToString(qcosh);
+        }
+
+        private void Tanh_Click(object sender, EventArgs e)
+        {
+            double qtanh = Double.Parse(textBox1_Result.Text);
+            labelOperation.Text = System.Convert.ToString("Tanh" + "(" + (textBox1_Result.Text) + ")");
+            qtanh = Math.Tanh(qtanh);
+            textBox1_Result.Text = System.Convert.ToString(qtanh);
+        }
+
+        private void Btnx2_Click(object sender, EventArgs e)
+        {
+            Double a;
+            a = Convert.ToDouble(textBox1_Result.Text) * Convert.ToDouble(textBox1_Result.Text);
+            textBox1_Result.Text = System.Convert.ToString(a);
+        }
+
+        private void Btnx3_Click(object sender, EventArgs e)
+        {
+            Double a;
+            a = Convert.ToDouble(textBox1_Result.Text) * Convert.ToDouble(textBox1_Result.Text) * Convert.ToDouble(textBox1_Result.Text);
+            textBox1_Result.Text = System.Convert.ToString(a);
+        }
+
+        private void Btnbin_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(textBox1_Result.Text);
+            textBox1_Result.Text = System.Convert.ToString(a, 2);
+        }
+
+        private void Btnhex_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(textBox1_Result.Text);
+            textBox1_Result.Text = System.Convert.ToString(a, 16);
+        }
     }
+
 }

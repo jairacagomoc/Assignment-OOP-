@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace Scical101
 {
     partial class Form1
@@ -29,6 +31,7 @@ namespace Scical101
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button21 = new System.Windows.Forms.Button();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,8 +48,8 @@ namespace Scical101
             this.button22 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scientificCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
@@ -74,20 +77,23 @@ namespace Scical101
             // 
             // button21
             // 
+            this.button21.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.ForeColor = System.Drawing.Color.Red;
             this.button21.Location = new System.Drawing.Point(237, 146);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(42, 32);
             this.button21.TabIndex = 67;
             this.button21.Text = "CE";
-            this.button21.UseVisualStyleBackColor = true;
+            this.button21.UseVisualStyleBackColor = false;
             this.button21.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.editToolStripMenuItem.Text = "Help";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -105,8 +111,9 @@ namespace Scical101
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(42, 32);
             this.button24.TabIndex = 78;
-            this.button24.Text = "ln";
+            this.button24.Text = "ln(x)";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.ln_Click);
             // 
             // button38
             // 
@@ -116,6 +123,7 @@ namespace Scical101
             this.button38.TabIndex = 77;
             this.button38.Text = "log";
             this.button38.UseVisualStyleBackColor = true;
+            this.button38.Click += new System.EventHandler(this.buttonLog_Click);
             // 
             // button23
             // 
@@ -125,6 +133,7 @@ namespace Scical101
             this.button23.TabIndex = 76;
             this.button23.Text = "x^3";
             this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.Btnx3_Click);
             // 
             // button25
             // 
@@ -134,6 +143,7 @@ namespace Scical101
             this.button25.TabIndex = 75;
             this.button25.Text = "x^2";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.Btnx2_Click);
             // 
             // button29
             // 
@@ -141,8 +151,9 @@ namespace Scical101
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(42, 32);
             this.button29.TabIndex = 74;
-            this.button29.Text = "csc";
+            this.button29.Text = "cosh";
             this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.Cosh_Click);
             // 
             // button30
             // 
@@ -150,8 +161,9 @@ namespace Scical101
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(42, 32);
             this.button30.TabIndex = 73;
-            this.button30.Text = "cot";
+            this.button30.Text = "tanh";
             this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.Tanh_Click);
             // 
             // button31
             // 
@@ -159,8 +171,9 @@ namespace Scical101
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(42, 32);
             this.button31.TabIndex = 72;
-            this.button31.Text = "sec";
+            this.button31.Text = "sinh";
             this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.Sinh_Click);
             // 
             // button26
             // 
@@ -170,6 +183,7 @@ namespace Scical101
             this.button26.TabIndex = 71;
             this.button26.Text = "cos";
             this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.Cos_Click);
             // 
             // button27
             // 
@@ -179,6 +193,7 @@ namespace Scical101
             this.button27.TabIndex = 70;
             this.button27.Text = "tan";
             this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.Tan_Click);
             // 
             // button28
             // 
@@ -188,16 +203,18 @@ namespace Scical101
             this.button28.TabIndex = 69;
             this.button28.Text = "sin";
             this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.Sin_Click);
             // 
             // button22
             // 
+            this.button22.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button22.Location = new System.Drawing.Point(191, 146);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(42, 32);
             this.button22.TabIndex = 68;
             this.button22.Text = "DEL";
-            this.button22.UseVisualStyleBackColor = true;
+            this.button22.UseVisualStyleBackColor = false;
             this.button22.Click += new System.EventHandler(this.DelButton_Click);
             // 
             // button17
@@ -209,57 +226,62 @@ namespace Scical101
             this.button17.TabIndex = 66;
             this.button17.Text = "=";
             this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.Equal_Button);
+            this.button17.Click += new System.EventHandler(this.EqualButton_Click);
             // 
             // button18
             // 
+            this.button18.BackColor = System.Drawing.Color.Gainsboro;
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.Location = new System.Drawing.Point(217, 257);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(62, 33);
             this.button18.TabIndex = 65;
             this.button18.Text = "-";
-            this.button18.UseVisualStyleBackColor = true;
+            this.button18.UseVisualStyleBackColor = false;
             this.button18.Click += new System.EventHandler(this.Operation_Button);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scientificCalculatorToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // scientificCalculatorToolStripMenuItem
+            // 
+            this.scientificCalculatorToolStripMenuItem.Name = "scientificCalculatorToolStripMenuItem";
+            this.scientificCalculatorToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.scientificCalculatorToolStripMenuItem.Text = "Scientific Calculator";
+            // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.viewToolStripMenuItem.Text = "Edit";
             // 
             // button19
             // 
+            this.button19.BackColor = System.Drawing.Color.Gainsboro;
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.Location = new System.Drawing.Point(217, 221);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(62, 33);
             this.button19.TabIndex = 64;
             this.button19.Text = "*";
-            this.button19.UseVisualStyleBackColor = true;
+            this.button19.UseVisualStyleBackColor = false;
             this.button19.Click += new System.EventHandler(this.Operation_Button);
             // 
             // button20
             // 
+            this.button20.BackColor = System.Drawing.Color.Gainsboro;
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.Location = new System.Drawing.Point(217, 185);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(62, 33);
             this.button20.TabIndex = 63;
             this.button20.Text = "/";
-            this.button20.UseVisualStyleBackColor = true;
+            this.button20.UseVisualStyleBackColor = false;
             this.button20.Click += new System.EventHandler(this.Operation_Button);
             // 
             // button15
@@ -275,13 +297,14 @@ namespace Scical101
             // 
             // button16
             // 
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.Location = new System.Drawing.Point(7, 185);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(50, 33);
             this.button16.TabIndex = 61;
             this.button16.Text = "sqrt";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.Sqrt_Click);
             // 
             // button14
             // 
@@ -290,9 +313,9 @@ namespace Scical101
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(50, 33);
             this.button14.TabIndex = 60;
-            this.button14.Text = ")";
+            this.button14.Text = "Hex";
             this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.Button_Click);
+            this.button14.Click += new System.EventHandler(this.Btnhex_Click);
             // 
             // button13
             // 
@@ -301,30 +324,32 @@ namespace Scical101
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(50, 33);
             this.button13.TabIndex = 59;
-            this.button13.Text = "(";
+            this.button13.Text = "bin";
             this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.Button_Click);
+            this.button13.Click += new System.EventHandler(this.Btnbin_Click);
             // 
             // button10
             // 
+            this.button10.BackColor = System.Drawing.Color.Gainsboro;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.Location = new System.Drawing.Point(166, 293);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(43, 33);
             this.button10.TabIndex = 58;
             this.button10.Text = "+";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.Operation_Button);
             // 
             // button11
             // 
+            this.button11.BackColor = System.Drawing.Color.Silver;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.Location = new System.Drawing.Point(116, 293);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(43, 33);
             this.button11.TabIndex = 57;
             this.button11.Text = "0";
-            this.button11.UseVisualStyleBackColor = true;
+            this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.Button_Click);
             // 
             // button12
@@ -340,101 +365,110 @@ namespace Scical101
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.Silver;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(166, 257);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(43, 33);
             this.button7.TabIndex = 55;
             this.button7.Text = "3";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.Button_Click);
             // 
             // button8
             // 
+            this.button8.BackColor = System.Drawing.Color.Silver;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(116, 257);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(43, 33);
             this.button8.TabIndex = 54;
             this.button8.Text = "2";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.Button_Click);
             // 
             // button9
             // 
+            this.button9.BackColor = System.Drawing.Color.Silver;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(67, 257);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(43, 33);
             this.button9.TabIndex = 53;
             this.button9.Text = "1";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.Button_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Silver;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(166, 221);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(43, 33);
             this.button4.TabIndex = 52;
             this.button4.Text = "6";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.Button_Click);
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.Silver;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(116, 221);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(43, 33);
             this.button5.TabIndex = 51;
             this.button5.Text = "5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.Button_Click);
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.Silver;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(67, 221);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(43, 33);
             this.button6.TabIndex = 50;
             this.button6.Text = "4";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.Button_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Silver;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(166, 185);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(43, 33);
             this.button3.TabIndex = 49;
             this.button3.Text = "9";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Button_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(116, 185);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(43, 33);
             this.button2.TabIndex = 48;
             this.button2.Text = "8";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.Button_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(67, 185);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(43, 33);
             this.button1.TabIndex = 47;
             this.button1.Text = "7";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button_Click);
             // 
             // textBox1_Result
@@ -450,11 +484,11 @@ namespace Scical101
             // 
             // menuStrip2
             // 
+            this.menuStrip2.BackColor = System.Drawing.Color.Silver;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.viewToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.editToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(288, 24);
@@ -477,6 +511,7 @@ namespace Scical101
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(288, 334);
             this.Controls.Add(this.labelOperation);
             this.Controls.Add(this.button21);
@@ -514,14 +549,25 @@ namespace Scical101
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1_Result);
             this.Controls.Add(this.menuStrip2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Scientific Calculator1";
+            this.Text = " Scientific Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Equal_Button(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -542,7 +588,6 @@ namespace Scical101
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.Button button19;
@@ -566,6 +611,7 @@ namespace Scical101
         private System.Windows.Forms.TextBox textBox1_Result;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.Label labelOperation;
+        private System.Windows.Forms.ToolStripMenuItem scientificCalculatorToolStripMenuItem;
     }
 }
 
