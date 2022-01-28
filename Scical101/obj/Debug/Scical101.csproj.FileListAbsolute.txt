@@ -1,0 +1,11 @@
+C:\Users\63907\source\repos\Scical101\bin\Debug\Scical101.exe.config
+C:\Users\63907\source\repos\Scical101\bin\Debug\Scical101.exe
+C:\Users\63907\source\repos\Scical101\bin\Debug\Scical101.pdb
+C:\Users\63907\source\repos\Scical101\obj\Debug\Scical101.csproj.AssemblyReference.cache
+C:\Users\63907\source\repos\Scical101\obj\Debug\Scical101.Form1.resources
+C:\Users\63907\source\repos\Scical101\obj\Debug\Scical101.Properties.Resources.resources
+C:\Users\63907\source\repos\Scical101\obj\Debug\Scical101.csproj.GenerateResource.cache
+C:\Users\63907\source\repos\Scical101\obj\Debug\Scical101.csproj.CoreCompileInputs.cache
+C:\Users\63907\source\repos\Scical101\obj\Debug\Scical101.exe
+C:\Users\63907\source\repos\Scical101\obj\Debug\Scical101.pdb
+C:\Users\63907\source\repos\Scical101\obj\Debug\Assignment02.Form1.resources
